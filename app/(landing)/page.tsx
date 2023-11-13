@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -9,6 +10,15 @@ export default function Home() {
       <Button>Click me</Button>
       <Button variant="outline">Button</Button>
       <Button variant="ghost">Button</Button>
+      <div>
+          <Link href='/sign-in'>
+          <Button>Sign in</Button>
+          </Link>
+          <Link href='/sign-up'>
+          <Button>Sign up</Button>
+          </Link>
+      </div>
+      
       </div>
       )
 }
