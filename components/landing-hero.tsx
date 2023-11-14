@@ -38,7 +38,7 @@ export const LandingHero: React.FC = () => {
     top: `${mousePosition.y}px`,
     left: `${mousePosition.x}px`,
     transform: `rotate(${rotationAngle}deg)`,
-    transition: "transform 0.2s ease-in-out",
+    transition: "transform 1.2s ease-in-out",
   };
 
   const hideCursorStyle: React.CSSProperties = {
