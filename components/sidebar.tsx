@@ -27,13 +27,13 @@ const routes = [
   {
     label: 'Image Generation',
     icon: ImageIcon,
-    color: "text-pink-700",
+    color: "text-red-700",
     href: '/image',
   },
   {
     label: 'Video Generation',
     icon: VideoIcon,
-    color: "text-orange-700",
+    color: "text-blue-700",
     href: '/video',
   },
   {
@@ -45,7 +45,7 @@ const routes = [
   {
     label: 'Code Generation',
     icon: Code,
-    color: "text-green-700",
+    color: "text-yellow-500",
     href: '/code',
   },
   {
@@ -63,14 +63,14 @@ export const Sidebar = ({
   const pathname = usePathname();
 
   return (
-    <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
+    <div className="space-y-4 py-4 flex flex-col h-full bg-[#415033] text-white">
       <div className="px-3 py-2 flex-1">
         <Link href="/dashboard" className="flex items-center pl-3 mb-14">
           <div className="relative h-8 w-8 mr-4">
             <Image fill alt="Logo" src="/logo.png" />
           </div>
           <h1 className={cn("text-2xl font-bold", poppins.className)}>
-            Genius
+            MasterAI
           </h1>
         </Link>
         <div className="space-y-1">
