@@ -19,9 +19,8 @@ export const LandingHero: React.FC = () => {
 
       if (birdRef.current) {
         const bird = birdRef.current;
-        const boundingBox = bird.getBoundingClientRect();
-        const dx = e.clientX - (boundingBox.left + boundingBox.width / 2);
-        const dy = e.clientY - (boundingBox.top + boundingBox.height / 2);
+        const dx = e.clientX - (bird.offsetLeft + bird.width / 2);
+        const dy = e.clientY - (bird.offsetTop + bird.height / 2);
         const angle = (Math.atan2(dy, dx) * 180) / Math.PI;
         setRotationAngle(angle);
       }
@@ -38,7 +37,7 @@ export const LandingHero: React.FC = () => {
     position: "fixed",
     top: `${mousePosition.y}px`,
     left: `${mousePosition.x}px`,
-    transform: `translate(-10%, -10%) rotate(${rotationAngle}deg)`,
+    transform: `rotate(${rotationAngle}deg)`,
     transition: "transform 0.2s ease-in-out",
   };
 
