@@ -91,7 +91,9 @@ export const Sidebar = ({
           ))}
         </div>
       </div>
-     
+      <div className="flex justify-center items-center my-4 mx-auto">
+        <Image alt="Your GIF Description" src="/ai.gif" width={150} height={150} />
+      </div>
     </div>
   );
 };
