@@ -1,8 +1,10 @@
-"use client";
-
+// Import necessary modules
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 import Image from "next/image";
 
+// Testimonials data
 const testimonials = [
   {
     name: "Joel",
@@ -30,19 +32,27 @@ const testimonials = [
   },
 ];
 
+// Landing content component
 export const LandingContent = () => {
   return (
     <div className="px-10 pb-20">
-        
       <h2 className="text-center text-4xl text-white font-extrabold mb-10">Testimonials</h2>
-      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {testimonials.map((item) => (
-          <Card key={item.description} className="bg-[#192339] border-none text-white">
+          <Card
+            key={item.description}
+            className="bg-[#192339] border-none text-white hover:shadow-lg hover:shadow-blue-400 cursor-pointer"
+          >
             <CardHeader>
               <CardTitle className="flex items-center gap-x-2">
                 <div>
+                <Avatar>
+                  <AvatarImage src="https://github.com/shadcn.png" />
+                  
+                </Avatar>
+
                   <p className="text-lg">{item.name}</p>
+
                   <p className="text-zinc-400 text-sm">{item.title}</p>
                 </div>
               </CardTitle>
@@ -54,5 +64,5 @@ export const LandingContent = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
