@@ -10,7 +10,7 @@ export const LandingFooter = () => {
         {/* Your Logo */}
         <Link href="/" className="flex items-center">
           {/* Replace "/logo.png" with the actual path to your logo */}
-          <h1 className="font-bold"> All Rights Reserved @</h1>
+          <h1 className=" text-zinc-400"> All Rights Reserved @</h1>
             <Image
                 alt="Logo"
                 src="/logo.png"
@@ -18,7 +18,7 @@ export const LandingFooter = () => {
                 height={32}
                 className="rounded-full"
                 ></Image>
-          <h1 className="text-2xl font-bold hover:text-blue-400">MasterAI</h1>
+          <h1 className="text-xl font-bold hover:text-blue-400">MasterAI</h1>
         </Link>
       </div>
 
